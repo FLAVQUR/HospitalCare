@@ -28,16 +28,23 @@ public class Prescricao {
 	public void setMedicamento(Medicamento medicamento) {
 		this.medicamento = medicamento;
 	}
+	public Date getData() {
+		return data;
+	}
+	public void setData(Date data) {
+		this.data = data;
+	}
 	
 	public Prescricao() {
 		horario = new ArrayList<HorarioToma>();
 	}
 	
-	public Prescricao(Doente doente, Medico medico, Medicamento medicamento, Date data) {
+	public Prescricao(Doente doente, Medico medico, Medicamento medicamento, Date data, ArrayList<HorarioToma> horario) {
 		this.doente = doente;
 		this.medico = medico;
 		this.medicamento = medicamento;
 		this.data = data;
+		this.horario = horario;
 	}
 	
 }

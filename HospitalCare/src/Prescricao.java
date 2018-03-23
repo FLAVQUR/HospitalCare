@@ -39,12 +39,12 @@ public class Prescricao {
 		horarioToma = new ArrayList<HorarioToma>();
 	}
 	
-	public Prescricao(Doente doente, Medico medico, Medicamento medicamento, Date data, ArrayList<HorarioToma> horarioToma) {
+	public Prescricao(Doente doente, Medico medico, Medicamento medicamento, Date data, ArrayList<HorarioToma> horario) {
 		this.doente = doente;
 		this.medico = medico;
 		this.medicamento = medicamento;
 		this.data = data;
-		this.horarioToma = horarioToma;
+		this.horarioToma = horario;
 	}
 	
 }

@@ -8,7 +8,7 @@ public class Prescricao {
 	
 	private Date data;
 	
-	private ArrayList<HorarioToma> horario;
+	private ArrayList<HorarioToma> horarioToma;
 	
 	public Doente getDoente() {
 		return doente;
@@ -36,15 +36,15 @@ public class Prescricao {
 	}
 	
 	public Prescricao() {
-		horario = new ArrayList<HorarioToma>();
+		horarioToma = new ArrayList<HorarioToma>();
 	}
 	
-	public Prescricao(Doente doente, Medico medico, Medicamento medicamento, Date data, ArrayList<HorarioToma> horario) {
+	public Prescricao(Doente doente, Medico medico, Medicamento medicamento, Date data, ArrayList<HorarioToma> horarioToma) {
 		this.doente = doente;
 		this.medico = medico;
 		this.medicamento = medicamento;
 		this.data = data;
-		this.horario = horario;
+		this.horarioToma = horarioToma;
 	}
 	
 }

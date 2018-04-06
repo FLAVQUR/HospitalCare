@@ -1,13 +1,15 @@
 
 public class Medico {
-	String Nome;
-	String Morada;
+	private String Nome;
+	private String Morada;
+	private String Telefone;
 	
 	public Medico() {}
 	
-	public Medico(String nome, String morada) {
-		Nome = nome;
-		Morada = morada;
+	public Medico(String nome, String morada, String telefone) {
+		this.Nome = nome;
+		this.Morada = morada;
+		this.Telefone = telefone;		
 	}
 
 	public String getNome() {
@@ -25,6 +27,13 @@ public class Medico {
 	public void setMorada(String morada) {
 		Morada = morada;
 	}
-	
+
+	public String getTelefone() {
+		return Telefone;
+	}
+
+	public void setTelefone(String telefone) {
+		Telefone = telefone;
+	}
 
 }

@@ -1,20 +1,16 @@
-import java.util.Date;
+import java.time.LocalDateTime;
 
 public class EntradaDoente {
 
-	private Date dataHora;
-
-	public EntradaDoente(Date dataHora) {
-		super();
+	private Integer codigo;
+	private LocalDateTime dataHora;
+	private Doente doente;
+	private Administrativo administrativo;
+	
+	public EntradaDoente(Integer codigo, LocalDateTime dataHora, Doente doente, Administrativo administrativo) {
+		this.codigo = codigo;
 		this.dataHora = dataHora;
+		this.doente = doente;
+		this.administrativo = administrativo;
 	}
-
-	public Date getDataHora() {
-		return dataHora;
-	}
-
-	public void setDataHora(Date dataHora) {
-		this.dataHora = dataHora;
-	}
-
 }

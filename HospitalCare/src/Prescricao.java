@@ -2,49 +2,29 @@ import java.util.ArrayList;
 import java.util.Date;
 
 public class Prescricao {
-	private Doente doente;
 	private Medico medico;
-	private Medicamento medicamento;
-	
-	private Date data;
-	
-	private ArrayList<HorarioToma> horarioToma;
-	
-	public Doente getDoente() {
-		return doente;
-	}
-	public void setDoente(Doente doente) {
-		this.doente = doente;
-	}
-	public Medico getMedico() {
-		return medico;
-	}
-	public void setMedico(Medico medico) {
-		this.medico = medico;
-	}
-	public Medicamento getMedicamento() {
-		return medicamento;
-	}
-	public void setMedicamento(Medicamento medicamento) {
-		this.medicamento = medicamento;
-	}
-	public Date getData() {
-		return data;
-	}
-	public void setData(Date data) {
-		this.data = data;
-	}
-	
+	private Doente doente;
+	private ArrayList<HorarioToma> horariosToma = new ArrayList<HorarioToma>();
+	private Date datahora;	
+
+	private String medicamento;
+
 	public Prescricao() {
-		horarioToma = new ArrayList<HorarioToma>();
+		
+	}	
+	
+	public Prescricao(int codigo, java.time.LocalDateTime datahora)  {
+		
 	}
 	
-	public Prescricao(Doente doente, Medico medico, Medicamento medicamento, Date data, ArrayList<HorarioToma> horario) {
-		this.doente = doente;
+	public Prescricao(Medico medico, Doente doente, ArrayList<HorarioToma> horariosToma, Date datahora) {
 		this.medico = medico;
-		this.medicamento = medicamento;
-		this.data = data;
-		this.horarioToma = horario;
+		this.doente = doente;
+		this.horariosToma = horariosToma;
+		this.datahora = datahora;
 	}
 	
+	public void adicionarHToma(HorarioToma ht) {
+		horariosToma.add(ht);
+	}
 }

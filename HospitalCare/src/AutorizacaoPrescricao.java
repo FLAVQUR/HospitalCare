@@ -2,8 +2,6 @@
 public class AutorizacaoPrescricao {
 	
 	private String observacoes;
-	
-	public AutorizacaoPrescricao() {}
 
 	public AutorizacaoPrescricao(String observacoes) {
 		this.observacoes = observacoes;

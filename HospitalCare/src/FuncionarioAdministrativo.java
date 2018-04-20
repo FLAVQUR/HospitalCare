@@ -1,19 +1,18 @@
-
-public class Administrativo {
+public class FuncionarioAdministrativo {
 
 	private Integer codigo;
 	private String nome;
 	
-	public Administrativo(Integer codigo, String nome) {
+	public FuncionarioAdministrativo(int codigo, String nome) {
 		this.codigo = codigo;
 		this.nome = nome;
 	}
 
-	public Integer getCodigo() {
+	public int getCodigo() {
 		return codigo;
 	}
 
-	public void setCodigo(Integer codigo) {
+	public void setCodigo(int codigo) {
 		this.codigo = codigo;
 	}
 

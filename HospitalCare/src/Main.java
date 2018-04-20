@@ -2,26 +2,36 @@ import java.time.LocalDateTime;
 
 public class Main {
 	
-	private static void precondicoes() {
+	public static void precondicoes() {
 		Doente doente = new Doente(1, "Maria");
 		RegistoObjetos.inserirDoente(1, doente);
-		Administrativo fadmin = new Administrativo(1, "José");
-		RegistoObjetos.inserirFuncAdmin(1, fadmin);
+		FuncionarioAdministrativo fadmin = new FuncionarioAdministrativo(1, "José");
+		RegistoObjetos.inserirFuncAdmin(1, fadmin);		
+		Medico medico = new Medico (1, "Melissa"); //Antonio
+		RegistoObjetos.inserirMedico(1, medico);
 	}
 	
-	private static void inserirEntrada() {
+	public static void inserirEntrada() {
 		Integer codigoDoente = 1;
 		Doente d =  RegistoObjetos.devolverDoente(codigoDoente);
-		System.out.println(d.getNome());
+		//System.out.println(d.getNome());
 		
 		Integer codigoFunc = 1;
-		Administrativo f = RegistoObjetos.devolverFuncAdmin(codigoFunc);
-		System.out.println(f.getNome());
+		FuncionarioAdministrativo f = RegistoObjetos.devolverFuncAdmin(codigoFunc);
+		//System.out.println(f.getNome());
 		
-		EntradaDoente e = new EntradaDoente(1, LocalDateTime.now(), d, f);
-		EntradaDoente e1 = new EntradaDoente(2, LocalDateTime.now(), d, f);
+		Entrada e = new Entrada(1, f, d, LocalDateTime.now());
+		Entrada e1 = new Entrada(2, f, d, LocalDateTime.now());
 		RegistoObjetos.inserirEntrada(1, e);
 		RegistoObjetos.inserirEntrada(2, e1);
+		
+		Integer codigoMedico = 1;
+		Medico m = RegistoObjetos.devolverMedico(codigoMedico);
+		//System.out.println(m.getNome());
+		
+		HorarioToma ht = new HorarioToma(LocalDateTime.now(),"ht");
+		
+		
 	}
 	
 	public static void main(String[] args) {

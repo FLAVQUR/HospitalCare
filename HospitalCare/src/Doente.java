@@ -1,19 +1,19 @@
 
 public class Doente {
 	
-	private Integer codigo;
+	private int codigo;
 	private String nome;
 	
-	public Doente(Integer codigo, String nome) {
+	public Doente(int codigo, String nome) {
 		this.codigo = codigo;
 		this.nome = nome;
 	}
 
-	public Integer getCodigo() {
+	public int getCodigo() {
 		return codigo;
 	}
 
-	public void setCodigo(Integer codigo) {
+	public void setCodigo(int codigo) {
 		this.codigo = codigo;
 	}
 

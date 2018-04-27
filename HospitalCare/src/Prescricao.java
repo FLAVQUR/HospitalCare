@@ -1,26 +1,20 @@
+import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.Date;
 
 public class Prescricao {
-	private Medico medico;
-	private Doente doente;
-	private ArrayList<HorarioToma> horariosToma = new ArrayList<HorarioToma>();
-	private Date datahora;	
-
-	private String medicamento;
-
-	public Prescricao() {
-		
-	}	
+	protected int codigo;
+	protected Medico medico;
+	protected Doente doente;
+	protected ArrayList<HorarioToma> horariosToma = new ArrayList<HorarioToma>();
+	protected LocalDateTime datahora;
 	
-	public Prescricao(int codigo, java.time.LocalDateTime datahora)  {
-		
-	}
+	public Prescricao() {}
 	
-	public Prescricao(Medico medico, Doente doente, ArrayList<HorarioToma> horariosToma, Date datahora) {
+	public Prescricao(int codigo, Medico medico, Doente doente, LocalDateTime datahora) {
+		this.codigo = codigo;
 		this.medico = medico;
 		this.doente = doente;
-		this.horariosToma = horariosToma;
 		this.datahora = datahora;
 	}
 	

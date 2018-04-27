@@ -7,8 +7,12 @@ public class Main {
 		RegistoObjetos.inserirDoente(1, doente);
 		FuncionarioAdministrativo fadmin = new FuncionarioAdministrativo(1, "José");
 		RegistoObjetos.inserirFuncAdmin(1, fadmin);		
-		Medico medico = new Medico (1, "Melissa"); //Antonio
+		Medico medico = new Medico (1, "Melissa");
 		RegistoObjetos.inserirMedico(1, medico);
+		Enfermeiro enfermeiro = new Enfermeiro (1, "Marco");
+		RegistoObjetos.inserirEnfermeiro(1, enfermeiro);
+		AutorizacaoPrescricao autorizacaoPrescricao = new AutorizacaoPrescricao("lel");
+		RegistoObjetos.inserirAutorizacaoPrescricao(1, autorizacaoPrescricao);
 	}
 	
 	public static void inserirEntrada() {
@@ -27,11 +31,14 @@ public class Main {
 		
 		Integer codigoMedico = 1;
 		Medico m = RegistoObjetos.devolverMedico(codigoMedico);
-		//System.out.println(m.getNome());
 		
-		HorarioToma ht = new HorarioToma(LocalDateTime.now(),"ht");
+		Integer codigoEnfermeiro= 1;
+		Enfermeiro enf = RegistoObjetos.devolverEnfermeiro(codigoEnfermeiro);
+		System.out.println(enf.getNome());
 		
+		new PrescricaoVerbalTUnica(1, m, d, LocalDateTime.now(), enf, new AutorizacaoPrescricao("lel"));
 		
+		HorarioToma ht = new HorarioToma(LocalDateTime.now(),"ht");		
 	}
 	
 	public static void main(String[] args) {

@@ -47,7 +47,7 @@ public class RegistoObjetos {
 	}
 	
 	public static Enfermeiro devolverEnfermeiro(int codigo) {
-		return enfermeiros.get(codigo);
+		return enfermeiros.get(codigo);s
 	}
 	
 	public static void inserirEnfermeiro(int codigo, Enfermeiro enfermeiro) {
